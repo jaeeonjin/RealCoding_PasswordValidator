@@ -1,7 +1,7 @@
 package com.github.jaeeonjin.passwordvalidator;
 
 import com.github.jaeeonjin.PasswordValidator;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
@@ -17,12 +17,12 @@ public class PasswordValidatorTest {
 
     private String testPW = "jaeeonjin";
 
-    private PasswordValidator pv;
-    private int minLen = 5;
-    private int maxLen = 10;
+    private static PasswordValidator pv;
+    private static int minLen = 5;
+    private static int maxLen = 10;
 
-    @Before
-    public void init() {
+    @BeforeClass
+    public static void init() {
         pv = new PasswordValidator(minLen, maxLen);
     }
 
